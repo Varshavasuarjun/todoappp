@@ -4,7 +4,7 @@ const taskSchema=mongoose.Schema({
    Checked : {
         
         type: Boolean,
-        default: true,
+        default: false,
     },
 })
 const taskModel=mongoose.model("task",taskSchema);
