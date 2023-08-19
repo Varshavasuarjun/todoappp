@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 const taskSchema=mongoose.Schema({
     Task:"String",
-    Checked: {
+   Checked : {
         
         type: Boolean,
         default: false,

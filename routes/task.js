@@ -14,8 +14,9 @@ router.post("/viewalltask", async(req,res)=>{
 // ADD TASK
 router.post("/addtask",async(req,res)=>{
     const data=req.body;
+    console.log(data);
     const newdata= await taskModel(data).save();
-    res.json(newdata);
+    res.json({message:"task added",newdata});
 
 })
 //  FILTER COMPLETED TASK
@@ -37,6 +38,7 @@ router.post("/deletetask/:id", async(req,res)=>{
     await taskModel.findByIdAndDelete(taskid);
     res.json({message:"deleted successfully"});
 })
+ 
 
 
 module.exports=router;
